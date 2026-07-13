@@ -1,68 +1,117 @@
-# 📱 Lumenize - Android App
+# Lumenize — Android App
 
-**Lumenize** is a modern, minimalist fintech application built on the **Stellar Network**. It empowers users to manage digital assets (XLM & USDC) with a seamless, user-friendly experience similar to traditional banking apps but with the power of blockchain.
+Native Android app for **Lumenize**, a cross-platform payment solution built on the Stellar Network. Send money anywhere in the world — in seconds, with near-zero fees.
 
-This repository contains the source code for the Android application. For the landing page and web implementation, visit [Lumenize-LP](https://github.com/xRecodz/Lumenize-LP).
-
----
-
-## ✨ Key Features
-
-- **Standardized Wallet Management**: Uses **BIP39 Mnemonic Phrases** (12 words) for secure wallet creation and restoration.
-- **Fast Transactions**: Send XLM or USDC instantly to any Stellar address or using our **Username Resolver** (e.g., `@sauce`).
-- **Path Payments**: Built-in support for auto-converting assets during transfer (e.g., Send XLM, recipient receives USDC).
-- **Soroban Smart Contracts**: Implementation of platform fee splitting (2% fee) automated via Soroban logic.
-- **Anchor Integration (SEP-24)**: Foundation for interactive deposits and withdrawals via regulated anchors.
-- **Real-time Balance**: Pull-to-refresh functionality to fetch live data from the Stellar Horizon API.
-- **Security First**: Hidden sensitive data (Secret Keys & Mnemonics) with "Tap to Reveal" and local persistence.
+> Built as a hackathon project by [Farhan N](mailto:farhannix9@gmail.com)
 
 ---
 
-## 🛠 Tech Stack
+## 🔗 Links
 
-- **Language**: [Kotlin](https://kotlinlang.org/) (Modern Android Development)
-- **UI Framework**: XML with Material Design 3 components.
-- **Blockchain SDK**: [Stellar SDK (Java/Kotlin)](https://github.com/stellar/java-stellar-sdk)
-- **Network**: Stellar Testnet (Horizon & RPC).
-- **Libraries**:
-    - `network.lightsail:stellar-sdk`: Core blockchain operations.
-    - `androidx.swiperefreshlayout`: Smooth UI refresh interactions.
-    - `com.journeyapps:zxing-android-embedded`: QR Code generation for deposits.
-    - `okhttp3`: Network requests for Friendbot and external APIs.
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Android Studio Iguana or newer.
-- JDK 11 or 17.
-- A Stellar Testnet account (can be generated within the app using the Faucet).
-
-### Installation
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/xRecodz/Lumenize-APK.git
-   ```
-2. Open the project in **Android Studio**.
-3. Let Gradle sync and download dependencies.
-4. Build and Run on your emulator or physical device.
+| | Link |
+|--|------|
+| 🌐 **Landing Page (Live)** | [lumenize-ten.vercel.app](https://lumenize-ten.vercel.app) |
+| 📱 **Download APK** | [Google Drive](https://drive.google.com/drive/folders/1MpIBBWcUF4OwWNt6qKo1imMXK0PyXgI3?usp=sharing) |
+| 🎬 **Demo Video** | [Watch on YouTube](https://youtu.be/Q0eDPNpcoZs) |
+| 📊 **Pitch Deck** | [View on Canva](https://canva.link/ddmma8iwgr9vcct) |
+| 💻 **Landing Page Repo** | [Lumenize-LP](https://github.com/xRecodz/Lumenize-LP) |
+| 📦 **Android App Repo** | [Lumenize-APK](https://github.com/xRecodz/Lumenize-APK) |
 
 ---
 
-## 📸 Preview
+## What Is Lumenize?
 
-- **Onboarding**: Minimalist artistic branding with font-spacing aesthetics.
-- **Dashboard**: High-contrast Gray theme with "Fintech" card styles.
-- **Transfer**: Dual-mode selector (Direct Send vs. Red Packet).
+Traditional international money transfers are slow, expensive, and deliberately opaque about what they charge. Lumenize fixes all three:
 
----
-
-## 📝 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+- **Settle in under 5 seconds** — not business days
+- **Near-zero fees** — Stellar charges $0.00001 per transaction
+- **Live market exchange rates** — no hidden markups
+- **100+ countries** supported via the Stellar network
 
 ---
 
-**Developed for the Stellar Hackathon.**
-*"Send crypto like sending a username."*
+## Download
+
+📦 **[Download APK (Google Drive)](https://drive.google.com/drive/folders/1MpIBBWcUF4OwWNt6qKo1imMXK0PyXgI3?usp=sharing)**
+
+**Requirements:**
+- Android 8.0 (Oreo) or higher
+- ~50MB storage
+- Internet connection
+
+**Install steps:**
+1. Download the APK from the link above
+2. On your Android device, go to **Settings → Security → Unknown Sources** and enable it
+3. Open the downloaded APK and tap **Install**
+4. Launch Lumenize and create your account
+
+---
+
+## Features
+
+| Feature | Status |
+|---------|--------|
+| Account creation & KYC | ✅ Live |
+| Fiat-to-stablecoin conversion | ✅ Live |
+| International transfer via Stellar | ✅ Live |
+| Real-time transaction status | ✅ Live |
+| Wallet balance dashboard | ✅ Live |
+| Currency Swap | 🔜 Soon |
+| Wallet & Portfolio view | 🔜 Soon |
+
+---
+
+## Tech Stack
+
+- **Language**: Kotlin
+- **Platform**: Android (min SDK 26 / Android 8.0)
+- **Blockchain**: Stellar Network + Horizon API
+- **Stablecoin**: USDC on Stellar
+- **Architecture**: MVVM + Clean Architecture
+- **Networking**: Retrofit + OkHttp
+
+---
+
+## How It Works
+
+```
+User deposits local currency (IDR, USD, EUR, etc.)
+        ↓
+Lumenize converts to USDC stablecoin on Stellar
+        ↓
+Stellar network settles in < 5 seconds
+        ↓
+Recipient receives funds in their preferred currency
+```
+
+---
+
+## Blockchain Infrastructure
+
+- **Network**: Stellar Network — built from day one for payments
+- **Settlement**: Sub-5-second finality
+- **Fee**: $0.00001 per transaction
+- **DEX**: Stellar's built-in DEX for live exchange rates
+- **Stablecoin**: USDC (Circle) — transparent, audited, 1:1 USD
+
+---
+
+## Demo
+
+🎬 Watch the full demo: **[youtube.com/watch?v=Q0eDPNpcoZs](https://youtu.be/Q0eDPNpcoZs)**
+
+📊 See the pitch deck: **[canva.link/ddmma8iwgr9vcct](https://canva.link/ddmma8iwgr9vcct)**
+
+---
+
+## Contact
+
+**Farhan N** — Founder & Solo Developer  
+📧 [farhannix9@gmail.com](mailto:farhannix9@gmail.com)  
+🌐 [lumenize-ten.vercel.app](https://lumenize-ten.vercel.app)
+
+---
+
+## License
+
+MIT License — feel free to learn from the code.
